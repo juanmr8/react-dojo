@@ -1,16 +1,20 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Flexible tooltip
+https://ui.dev/c/react/flexible-tooltip-challenge
 
-Currently, two official plugins are available:
+You're given an app that... kind of works. The only problem is when you hover over any of the yellow underlined text, the tooltip renders in the wrong position. Your job is to fix the app so that the tooltip renders correctly – either above the text if there's room, or below it if there's not.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To do this, you'll want to utilize the browser's getBoundingClientRect API to get position information about specific elements.
 
-## React Compiler
+You won't need to touch any code other than the Tip component.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tasks
+1. Position the tooltip above the hovered text if there’s enough room
 
-## Expanding the ESLint configuration
+2. If there's not enough room above it, and if there's more room below it than above it, position the tooltip below the hovered text.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. If there's not enough room above it, and there's less room below it, position the tooltip above the hovered text
+
+## The Result
+The final version of your app should look and behave like this.
+
