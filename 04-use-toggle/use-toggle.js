@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default function useToggle(initialValue: boolean = true) {
+export default function useToggle(initialValue = true) {
   const [on, setOn] = React.useState(() => {
     if (typeof initialValue === "boolean") {
       return initialValue;
@@ -8,11 +8,11 @@ export default function useToggle(initialValue: boolean = true) {
     return Boolean(initialValue);
   });
 
-  const handleToggle = React.useCallback((value: boolean) => {
+  const handleToggle = React.useCallback((value) => {
     if (typeof value === "boolean") {
       return setOn(value);
     }
-    return setOn((v: boolean) => !v);
+    return setOn((v) => !v);
   }, []);
   return [on, handleToggle];
 }
