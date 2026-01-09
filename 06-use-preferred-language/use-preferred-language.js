@@ -18,5 +18,4 @@ const getServerSnapShot = () => {
 
 export default function usePreferredLanguage() {
   return React.useSyncExternalStore(subscribe, getSnapshot, getServerSnapShot);
-  rredLanguage;
 }
