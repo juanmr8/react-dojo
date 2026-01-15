@@ -13,7 +13,7 @@ export default function useInterval(cb, ms) {
   React.useEffect(() => {
     id.current = window.setInterval(func, ms);
     return clearFunc;
-  }, [ms])
+  }, [ms]);
 
   return clearFunc;
 }
